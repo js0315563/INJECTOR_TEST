@@ -1,0 +1,17 @@
+C:\GitHub\Injector_test\Injector_test\Injector_test\bin\Debug\Injector_test.exe.config
+C:\GitHub\Injector_test\Injector_test\Injector_test\bin\Debug\Injector_test.exe
+C:\GitHub\Injector_test\Injector_test\Injector_test\bin\Debug\Injector_test.pdb
+C:\GitHub\Injector_test\Injector_test\Injector_test\bin\Debug\EmbedIO.dll
+C:\GitHub\Injector_test\Injector_test\Injector_test\bin\Debug\Newtonsoft.Json.dll
+C:\GitHub\Injector_test\Injector_test\Injector_test\bin\Debug\Swan.Lite.dll
+C:\GitHub\Injector_test\Injector_test\Injector_test\bin\Debug\System.ValueTuple.dll
+C:\GitHub\Injector_test\Injector_test\Injector_test\bin\Debug\EmbedIO.pdb
+C:\GitHub\Injector_test\Injector_test\Injector_test\bin\Debug\EmbedIO.xml
+C:\GitHub\Injector_test\Injector_test\Injector_test\bin\Debug\Newtonsoft.Json.xml
+C:\GitHub\Injector_test\Injector_test\Injector_test\bin\Debug\Swan.Lite.xml
+C:\GitHub\Injector_test\Injector_test\Injector_test\bin\Debug\System.ValueTuple.xml
+C:\GitHub\Injector_test\Injector_test\Injector_test\obj\Debug\Injector_test.csproj.AssemblyReference.cache
+C:\GitHub\Injector_test\Injector_test\Injector_test\obj\Debug\Injector_test.csproj.CoreCompileInputs.cache
+C:\GitHub\Injector_test\Injector_test\Injector_test\obj\Debug\Injector.C42CC614.Up2Date
+C:\GitHub\Injector_test\Injector_test\Injector_test\obj\Debug\Injector_test.exe
+C:\GitHub\Injector_test\Injector_test\Injector_test\obj\Debug\Injector_test.pdb

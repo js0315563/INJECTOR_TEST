@@ -1,0 +1,118 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Injector Test Bench</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div id="app">
+      <!-- Header: Date/Time + Serial input in one row across full width -->
+      <header class="topbar one-line">
+        <div class="datetime compact">
+          <span id="dateStr">--</span>
+          <span id="timeStr">--:--:--</span>
+        </div>
+
+        <div class="serial-block compact">
+          <label for="serialInput">Серийный номер</label>
+          <div class="serial-input-row">
+            <input id="serialInput" class="serial-input" type="text" inputmode="none" placeholder="Введите S/N" autocomplete="off" />
+            <button id="clearSerial" class="ghost">Очистить</button>
+          </div>
+        </div>
+      </header>
+
+      <!-- Main Controls -->
+      <section class="controls">
+        <div class="buttons">
+          <button id="btnStart" class="primary big">Start test</button>
+          <button id="btnStop" class="danger big">Stop test</button>
+        </div>
+
+        <div class="status-row">
+          <div class="status-item">
+            <span class="label">Статус теста</span>
+            <span id="testStatus" class="badge idle">IDLE</span>
+          </div>
+
+          <div class="status-item">
+            <span class="label">Feed pump</span>
+            <span id="feedPump" class="badge off">OFF</span>
+          </div>
+
+          <div class="status-item">
+            <span class="label">Drain pump</span>
+            <span id="drainPump" class="badge off">OFF</span>
+          </div>
+
+          <div class="status-item action">
+            <button id="btnSave" class="save full" disabled>Save result</button>
+          </div>
+        </div>
+      </section>
+
+      <!-- Metrics as two rows: each row spans full width (value + chart) -->
+      <section class="metrics2">
+        <div class="metric-row">
+          <div class="metric-card">
+            <div class="metric-header">
+              <span class="metric-title">Давление</span>
+              <span class="metric-unit">bar</span>
+            </div>
+            <div class="metric-value" id="pressureVal">--</div>
+          </div>
+          <div class="chart-card">
+            <canvas id="pressureChart"></canvas>
+            <div id="pressureChartEmpty" class="empty-overlay">График появится после завершения теста</div>
+          </div>
+        </div>
+
+        <div class="metric-row">
+          <div class="metric-card">
+            <div class="metric-header">
+              <span class="metric-title">Расход</span>
+              <span class="metric-unit">л/мин</span>
+            </div>
+            <div class="metric-value" id="flowVal">--</div>
+          </div>
+          <div class="chart-card">
+            <canvas id="flowChart"></canvas>
+            <div id="flowChartEmpty" class="empty-overlay">График появится после завершения теста</div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Footer: USB + Version -->
+      <footer class="bottombar">
+        <div class="usb">
+          USB: <span id="usbStatus" class="dot unknown">UNKNOWN</span>
+        </div>
+        <div class="spacer"></div>
+        <div class="version">
+          Версия: <span id="appVersion">--</span>
+        </div>
+      </footer>
+    </div>
+
+    <!-- On-screen keyboard overlay (covers bottom half) -->
+    <div id="oskPanel" class="osk-panel hidden" aria-hidden="true">
+      <div class="osk-panel-inner">
+        <div id="osk" class="osk-grid"></div>
+        <div id="osk-bottom" class="osk-bottom">
+          <button id="oskUnderscore" class="sm">_</button>
+          <button id="oskDash" class="sm">-</button>
+          <button id="oskSpace" class="sm space">Space</button>
+          <button id="oskBackspace" class="ghost sm" title="Backspace">←</button>
+          <button id="oskClear" class="ghost sm" title="Очистить">Очистить</button>
+          <button id="oskEnter" class="primary sm enter" title="Enter">Enter</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Chart.js UMD (local, offline). Put the real file into ./lib/chart.umd.min.js -->
+    <script src="lib/chart.umd.min.js" defer></script>
+    <script src="app.js" defer></script>
+  </body>
+</html>

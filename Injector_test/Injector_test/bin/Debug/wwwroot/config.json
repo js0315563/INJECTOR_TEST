@@ -1,0 +1,10 @@
+{
+  "pressureAxis": {
+    "min": 0,
+    "max": 200
+  },
+  "flowAxis": {
+    "min": 0,
+    "max": 10
+  }
+}
